@@ -1,15 +1,12 @@
 @import 'normalize-scss';
 @include normalize();
-@import "_variables";
-@import "_typo";
-@import "_functions";
-@import "_mixins";
-@import "_base";
 
+@import 'variables';
+@import 'typo';
+@import 'functions';
+@import 'mixins';
+@import 'base';
 
 // components
-@import "components/header";
-@import "components/footer";
-
-//pages
-@import "pages/home";
+@import 'components/header';
+@import 'components/footer';
