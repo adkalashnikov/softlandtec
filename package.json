@@ -1,7 +1,7 @@
 {
   "name": "html-start-theme",
   "version": "0.0.1",
-  "description": "Webpack html/css start theme f5-studio",
+  "description": "Webpack html/css start theme",
   "main": "main.js",
   "scripts": {
     "build": "del-cli dist && webpack --mode=production",

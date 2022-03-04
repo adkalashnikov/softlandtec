@@ -7,12 +7,25 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: config.entry,
     output: {
-        filename: "./js/bundle.js",
+        filename: './js/[name].js',
+        path: __dirname + '/dist'
     },
     optimization: {
-        minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
+        minimizer: [
+            new TerserJSPlugin({
+                terserOptions: {
+                    output: {comments: false}
+                }
+            }),
+            new OptimizeCSSAssetsPlugin({
+                cssProcessor: require('cssnano'),
+                cssProcessorPluginOptions: {
+                    preset: ['default', {discardComments: {removeAll: true}}],
+                },
+            })
+        ]
     },
     devtool: "source-map",
     resolve: {
@@ -47,7 +60,7 @@ module.exports = {
                     {
                         loader: 'html-loader',
                         options: {
-                            minimize: true,
+                            //minimize: true,
                             interpolate: true
                         }
                     }
@@ -91,7 +104,7 @@ module.exports = {
             jQuery: 'jquery'
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "css/[name].css",
             chunkFilename: "[id].css"
         }),
         new CopyWebpackPlugin([{ from: './src/assets/icons', to: './icons' }])

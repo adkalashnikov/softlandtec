@@ -11,7 +11,8 @@ function generateHtmlPlugins(templateDir) {
         return new HtmlWebpackPlugin({
             favicon: path.resolve(__dirname, '../src/assets/icons/favicon.ico'),
             filename: `${name}.html`,
-            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+            chunks: ['base', name]
         })
     })
 }
