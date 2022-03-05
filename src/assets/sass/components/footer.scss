@@ -1,5 +1,22 @@
 .footer {
-  flex: 0 0 auto;
-  padding: 10px 0;
-  border-top: 1px solid #000;
+    flex: 0 0 auto;
+    padding: 30px 0;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #3c98c9;
+    text-align: center;
+    font-size: 22px;
+    line-height: 29px;
+    transition: padding .5s ease 0s;
+
+    @include min-w($screen-md) {
+        padding: 50px 0;
+    }
+
+    @include min-w($screen-xxl) {
+        padding: 104px 0;
+        font-size: 36px;
+        line-height: 52px;
+    }
 }

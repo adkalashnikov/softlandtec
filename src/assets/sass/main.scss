@@ -2,9 +2,9 @@
 @include normalize();
 
 @import 'variables';
-@import 'typo';
-@import 'functions';
 @import 'mixins';
+@import 'functions';
+@import 'typo';
 @import 'base';
 
 // components

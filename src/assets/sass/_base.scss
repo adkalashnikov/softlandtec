@@ -1,35 +1,83 @@
-html,
-body {
-  height: 100%;
-}
-
 html {
-  box-sizing: border-box;
-  font-family: $font-family;
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: $text-color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: $link-color--hover;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+section {
+    position: relative;
+    z-index: 1;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/webpack.png");
+    background: $body-bg;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
 }
 
 .content {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
-.container {
-  width: 100%;
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
+.page-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: padding .5s ease 0s;
+
+    @include min-w($screen-md) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    @include min-w($screen-lg) {
+        max-width: 95%;
+    }
+
+    @include min-w($screen-xxl) {
+        padding-left: 130px;
+        padding-right: 130px;
+        max-width: 1920px;
+    }
 }

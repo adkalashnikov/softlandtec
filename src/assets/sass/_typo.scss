@@ -49,26 +49,44 @@
     font-display: swap;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: $font-family;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-family;
+    font-weight: 600;
+
+    @include min-w($screen-lg) {
+        font-size: 55px;
+        line-height: 70px;
+    }
 }
 
 h1 {
-  font-size: 42px;
+    font-size: 22px;
+    line-height: 29px;
+    font-stretch: normal;
+    font-style: normal;
+
+    @include min-w($screen-lg) {
+        font-size: 85px;
+        line-height: 95px;
+    }
 }
 
 h2 {
-  font-size: 36px;
+    font-size: 20px;
 }
 
 h3 {
-  font-size: 28px;
+    font-size: 18px;
 }
 
 h4 {
-  font-size: 18px;
+    font-size: 16px;
 }
 
 h5 {
-  font-size: 16px;
+    font-size: 14px;
 }
