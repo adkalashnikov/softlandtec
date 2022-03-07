@@ -13,7 +13,7 @@ $page-header-z: 10000;
     }
 
     &__inner {
-        max-width: 1660px;
+        max-width: 1642px;
         margin: 0 auto;
     }
 
@@ -62,8 +62,8 @@ $page-header-z: 10000;
 
 .page-header-nav {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 18px;
+    line-height: 21px;
 
     &__list {
         display: flex;
@@ -74,12 +74,12 @@ $page-header-z: 10000;
     }
 
     a {
-        color: #626262;
+        color: #ffffff;
         display: block;
         transition: color .3s;
 
         &:hover {
-            color: #ffffff;
+            color: #626262;
         }
     }
 
@@ -89,7 +89,7 @@ $page-header-z: 10000;
         }
 
         @include min-w($screen-xl) {
-            margin-right: 33px;
+            margin-right: 96px;
         }
 
         &:last-child {
@@ -165,7 +165,7 @@ $page-header-z: 10000;
     }
 
     &__list-wrapper {
-        margin-bottom: 80px;
+        margin: 80px 0;
 
         ul {
             display: flex;
@@ -181,17 +181,17 @@ $page-header-z: 10000;
             font-weight: 500;
             font-size: 18px;
             line-height: 160%;
-            color: #626262;
+            color: #ffffff;
             padding: 0;
             transition: color .3s;
 
             &:hover {
-                color: #ffffff;
+                color: #626262;
             }
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -199,7 +199,7 @@ $page-header-z: 10000;
 
             &.current-menu-item {
                 a {
-                    color: #ffffff;
+                    text-decoration: underline;
                 }
             }
         }

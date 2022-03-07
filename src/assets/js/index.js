@@ -1,3 +1,4 @@
+import AOS from 'aos';
 import showNav from 'js/components/main-nav';
 
 //Sticky header
@@ -16,4 +17,12 @@ document.addEventListener('scroll', () => {
 
 window.addEventListener('load', () => {
     showNav();
+
+    // init animation lib
+    setTimeout(() => {
+        AOS.init({
+            once: true,
+            duration: 500
+        });
+    }, 0);
 });

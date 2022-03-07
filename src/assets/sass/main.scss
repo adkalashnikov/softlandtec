@@ -1,6 +1,8 @@
 @import 'normalize-scss';
 @include normalize();
 
+@import '~aos/dist/aos';
+
 @import 'variables';
 @import 'mixins';
 @import 'functions';
