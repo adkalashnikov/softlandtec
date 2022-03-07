@@ -1,0 +1,30 @@
+// Кнопки
+.btn {
+    font-family: $font-family;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    padding: 12px 80px;
+    background: #3c98c9;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    transition: background-color .3s;
+    text-decoration: none;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 60px;
+
+    @include min-w($screen-xl) {
+        height: 72px;
+    }
+
+    &:hover {
+        background:  darken(#3c98c9, 10%);
+        color: #ffffff;
+    }
+}
