@@ -27,4 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     // /lazy load video background
+
+    // show more text in about us cards
+    const moreContentTriggers = [].slice.call(document.querySelectorAll('.js-show-more-text'));
+
+    if(moreContentTriggers) {
+        moreContentTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', (e) => {
+                const hiddenContent = e.target.parentNode.querySelector('.s-ab__item-more-text');
+                dl.log(hiddenContent);
+                hiddenContent.classList.toggle('hide');
+
+                if (e.target.innerHTML === "Show More") {
+                    e.target.innerHTML = "Show Less";
+                } else {
+                    e.target.innerHTML = "Show More";
+                }
+            });
+        });
+    }
+    // /show more text in about us cards
 });

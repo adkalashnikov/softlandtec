@@ -1,0 +1,32 @@
+.s-t {
+    background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%,
+            rgba(236, 240, 253, .53) 14.32%,
+            #ecf0fd 45.83%, rgba(236, 240, 253, .43) 84.33%,
+            rgba(236, 240, 253, 0) 100%);
+
+    &__inner {
+        padding: 40px 0;
+        max-width: 400px;
+        margin: 0 auto;
+        transition: padding .3s;
+
+        @include min-w($screen-md) {
+            max-width: 1236px;
+            padding: vw(175) 0;
+        }
+
+        @include min-w($screen-xxl) {
+            padding: 175px 0;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.27;
+        text-align: center;
+        color: #272d4e;
+
+        @include fluid-font(20px, 55px, $screen-md, 1920px);
+    }
+}

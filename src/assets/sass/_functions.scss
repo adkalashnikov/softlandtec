@@ -30,3 +30,8 @@
 
   @return calc( #{$k} * 100vw + #{$b} );
 }
+
+@function vw($w) {
+    $k: $w / 19.02;
+    @return #{$k}vw;
+}

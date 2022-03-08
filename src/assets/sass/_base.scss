@@ -81,3 +81,9 @@ section {
         max-width: 1920px;
     }
 }
+
+[data-aos-delay] {
+    @include max-w($screen-lg) {
+        transition-delay: 0s !important;
+    }
+}
