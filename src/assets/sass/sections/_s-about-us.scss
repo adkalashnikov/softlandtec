@@ -59,7 +59,6 @@
         }
 
         @include min-w($screen-xl) {
-            //width: calc(33.33% - 48px);
             width: vw(430);
             margin-right: vw(70);
             margin-bottom: 0;

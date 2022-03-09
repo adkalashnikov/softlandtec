@@ -22,11 +22,11 @@
 
     &__title {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 26px;
         line-height: 1.27;
         text-align: center;
         color: #272d4e;
 
-        @include fluid-font(20px, 55px, $screen-md, 1920px);
+        @include fluid-font(26px, 55px, $screen-md, 1920px);
     }
 }

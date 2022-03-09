@@ -1,0 +1,565 @@
+.s-why {
+    margin-top: 40px;
+
+    @include min-w($screen-md) {
+        margin-top: vw(-70);
+    }
+
+    @include min-w($screen-xxl) {
+        margin-top: -70px;
+    }
+
+    &__top {
+        position: relative;
+    }
+
+    &__top-decor {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 43.5px;
+        height: 67.5px;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%);
+        z-index: 1;
+        animation: down 2s infinite;
+
+        @include min-w($screen-md) {
+            top: vw(220);
+            width: vw(87);
+            height: vw(135);
+        }
+
+        @include min-w($screen-xxl) {
+            width: 87px;
+            height: 135px;
+            top: 220px;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 1;
+        font-weight: 800;
+        text-align: center;
+        color: #272d4e;
+        margin: 0;
+        margin-bottom: 85px;
+
+        @include fluid-font(28px, 72px, $screen-md, 1920px);
+
+        @include min-w($screen-md) {
+            margin-bottom: vw(150);
+        }
+
+        @include min-w($screen-xxl) {
+            margin-bottom: 150px;
+        }
+    }
+
+    &__main {
+        background: #3c98c9;
+        color: #ffffff;
+        position: relative;
+        padding: 70px 0;
+
+        @include min-w($screen-md) {
+            padding: vw(170) 0;
+        }
+
+        @include min-w($screen-lgx) {
+            padding-top: 20px;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -1px;
+            left: -1%;
+            width: 102%;
+            padding-top: (105 / 1928) * 100%;
+            background: url('../../images/r-top.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: -1%;
+            width: 102%;
+            padding-top: (105 / 1928) * 100%;
+            background: url('../../images/r-bottom.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__main-inner {
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include min-w($screen-md) {
+            padding-top: 48px;
+            max-width: 1230px;
+        }
+
+        @include min-w($screen-lgx) {
+            padding-top: 0;
+        }
+    }
+
+    .r {
+        margin-bottom: 48px;
+
+        @include min-w($screen-md) {
+            display: flex;
+            align-items: center;
+        }
+
+        [class$="__col-1"] {
+            @include min-w($screen-lgx) {
+                position: relative;
+            }
+        }
+
+        &:nth-child(odd) {
+            [class$="__col-1"] {
+                @include min-w($screen-md) {
+                    margin-right: 30px;
+                }
+
+                @include min-w($screen-lgx) {
+                    margin-right: 70px;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            @include min-w($screen-lgx) {
+                justify-content: flex-end;
+            }
+
+            [class$="__col-1"] {
+                @include min-w($screen-md) {
+                    order: 2;
+                    margin-left: 30px;
+                }
+
+                @include min-w($screen-lgx) {
+                    margin-left: 70px;
+                }
+            }
+
+            [class$="__col-2"] {
+                @include min-w($screen-md) {
+                    order: 1;
+                }
+            }
+        }
+
+        &__img-wrapper {
+            overflow: hidden;
+            height: 300px;
+            position: relative;
+            display: block;
+            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: -12px 10px 22px #1a709e;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            @include min-w($screen-md) {
+                margin-bottom: 0;
+                height: 400px;
+                width: 220px;
+                box-shadow: vw(-25) vw(20) vw(44) #1a709e;
+            }
+
+            @include min-w($screen-lgx) {
+                box-shadow: -25px 20px 44px #1a709e;
+                width: 430px;
+                height: 548px;
+            }
+
+            img {
+                object-fit: cover;
+                max-width: none;
+                width: auto;
+                height: 100%;
+                min-width: 100%;
+                min-height: 100%;
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translate(50%, -50%);
+            }
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.22;
+            margin-bottom: 15px;
+
+            @include fluid-font(20px, 36px, $screen-md, $screen-lgx);
+
+            @include min-w($screen-lgx) {
+                margin-bottom: 17px;
+            }
+        }
+
+        &__text {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 30px;
+
+            @include fluid-font(15px, 18px, $screen-md, $screen-lgx);
+        }
+    }
+
+    .r1 {
+        @include min-w($screen-lgx) {
+            margin-bottom: 55px;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 602px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 216px;
+                height: 475px;
+                top: -49px;
+                left: -42px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 255px;
+                height: 255px;
+                bottom: -31px;
+                right: -21px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    .r2 {
+        @include min-w($screen-lgx) {
+            margin-bottom: 0;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 480px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: -48px;
+                left: 92px;
+                background: url('../../icons/circle-65.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 262px;
+                height: 262px;
+                top: -26px;
+                right: -129px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-3 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 475px;
+                height: 215px;
+                top: 190px;
+                right: -183px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+    }
+
+    .r3 {
+        @include min-w($screen-lgx) {
+            margin-bottom: 237px;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 602px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: 169px;
+                left: -128px;
+                background: url('../../icons/circle-65.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 401px;
+                height: 401px;
+                top: 214px;
+                left: -108px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-3 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 216px;
+                height: 475px;
+                top: 417px;
+                left: -95px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+    }
+
+    .r4 {
+        @include min-w($screen-lgx) {
+            margin-bottom: 117px;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 480px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: 420px;
+                left: -44px;
+                background: url('../../icons/circle-65.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 262px;
+                height: 262px;
+                top: -54px;
+                left: -35px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-3 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 475px;
+                height: 215px;
+                top: 379px;
+                left: -19px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+    }
+
+    .r5 {
+        @include min-w($screen-lgx) {
+            margin-bottom: 177px;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 602px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: -29px;
+                right: -32px;
+                background: url('../../icons/circle-65.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 401px;
+                height: 401px;
+                top: 226px;
+                left: 79px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: .2;
+            }
+        }
+
+        .decor-3 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 216px;
+                height: 475px;
+                top: -23px;
+                left: 294px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+    }
+
+    .r6 {
+        @include min-w($screen-lgx) {
+            align-items: flex-start;
+            transform: translateY(60px);
+            z-index: 1;
+            position: relative;
+        }
+
+        &__col-2 {
+            @include min-w($screen-lgx) {
+                max-width: 480px;
+                padding-top: 30px;
+            }
+        }
+
+        .decor-1 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: 376px;
+                left: -582px;
+                background: url('../../icons/circle-65.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-2 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 262px;
+                height: 262px;
+                top: -90px;
+                left: -69px;
+                background: url('../../icons/circle-262.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .decor-3 {
+            display: none;
+
+            @include min-w($screen-lgx) {
+                display: block;
+                position: absolute;
+                width: 475px;
+                height: 215px;
+                top: 304px;
+                left: -416px;
+                background: url('../../icons/dot-pattern.svg');
+            }
+        }
+    }
+}

@@ -22,7 +22,10 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         AOS.init({
             once: true,
-            duration: 500
+            duration: 500,
+            disable() {
+                return window.innerWidth < 992;
+            }
         });
     }, 0);
 });
