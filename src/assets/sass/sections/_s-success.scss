@@ -1,14 +1,14 @@
-.s-ab {
+.s-sc {
     &__top {
         padding: 50px 0;
         text-align: center;
 
         @include min-w($screen-lgx) {
-            padding: vw(155) 0 vw(155);
+            padding: vw(260) 0 vw(120);
         }
 
         @include min-w($screen-xxl) {
-            padding: 155px 0 150px;
+            padding: 260px 0 120px;
         }
     }
 
@@ -76,85 +76,22 @@
 
             @include min-w($screen-lgx) {
                 margin-right: vw(70);
-                padding-top: vw(75);
             }
 
             @include min-w($screen-xxl) {
                 margin-right: 70px;
-                padding-top: 75px;
             }
         }
 
         &:nth-child(3n+3) {
             @include min-w($screen-lgx) {
                 margin-right: 0;
-                padding-top: vw(150);
-            }
-
-            @include min-w($screen-xxl) {
-                padding-top: 150px;
             }
         }
     }
 
     &__item {
         position: relative;
-    }
-
-    [class^=s-ab__item-decor] {
-        display: none;
-        position: absolute;
-        z-index: 2;
-        border-radius: vw(10);
-        box-shadow: 0 vw(18) 52.8537px rgba(215, 228, 249, .5);
-
-        @include min-w($screen-lgx) {
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0 18px 52.8537px rgba(215, 228, 249, .5);
-        }
-    }
-
-    &__item-decor-1 {
-        left: vw(32);
-        top: vw(-50);
-        width: vw(140);
-        height: vw(95);
-
-        @include min-w($screen-xxl) {
-            left: 32px;
-            top: -50px;
-            width: 140px;
-            height: 95px;
-        }
-    }
-
-    &__item-decor-2 {
-        left: vw(268);
-        top: vw(-133);
-        width: vw(114);
-        height: vw(77);
-
-        @include min-w($screen-xxl) {
-            left: 268px;
-            top: -133px;
-            width: 114px;
-            height: 77px;
-        }
-    }
-
-    &__item-decor-3 {
-        left: vw(325);
-        top: vw(115);
-        width: vw(170);
-        height: vw(116);
-
-        @include min-w($screen-xxl) {
-            left: 325px;
-            top: 115px;
-            width: 170px;
-            height: 116px;
-        }
     }
 
     &__item-image {
@@ -224,35 +161,5 @@
         color: #94a2b3;
 
         @include fluid-font(15px, 18px, $screen-md, 1920px);
-    }
-
-    &__item-more {
-        display: block;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 25px;
-        color: #299ef3;
-        margin-top: 15px;
-        transition: color .3s;
-
-        @include min-w($screen-xl) {
-            margin-top: 19px;
-        }
-
-        &:hover {
-            color: darken(#299ef3, 20%);
-        }
-    }
-
-    &__item-more-text {
-        transition: max-height .3s;
-
-        &.hide {
-            max-height: 0;
-            transition: max-height .3s;
-            display: block;
-            overflow: hidden;
-        }
     }
 }
