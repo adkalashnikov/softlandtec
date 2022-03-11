@@ -9,7 +9,7 @@ $page-header-z: 10000;
     transition: background .3s ease 0s, padding .3s ease 0s;
 
     @include min-w(1024px) {
-        padding: 28px 24px;
+        padding: 15px 24px;
     }
 
     &__inner {
@@ -57,6 +57,10 @@ $page-header-z: 10000;
         top: 0;
         width: 100%;
         background: #161616;
+
+        @include min-w(1024px) {
+            padding: 28px 24px;
+        }
     }
 }
 

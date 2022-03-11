@@ -26,6 +26,10 @@
         @include min-w($screen-md) {
             max-width: 1430px;
         }
+
+        @include min-w($screen-xxl) {
+            margin-left: 82px;
+        }
     }
 
     &__row-inner {
@@ -178,7 +182,7 @@
         }
 
         @include min-w($screen-xxl) {
-            margin-bottom: 40px;
+            margin-bottom: 56px;
             height: 293px;
         }
 
@@ -206,7 +210,7 @@
         @include fluid-font(20px, 36px, $screen-md, 1920px);
 
         @include min-w($screen-lgx) {
-            margin-bottom: 27px;
+            margin-bottom: 25px;
         }
 
         * {

@@ -233,6 +233,10 @@
             @include min-w($screen-lgx) {
                 max-width: 602px;
             }
+
+            @include min-w($screen-xxl) {
+                padding-top: 17px;
+            }
         }
 
         .decor-1 {
@@ -271,9 +275,17 @@
             margin-bottom: 0;
         }
 
+        @include min-w($screen-xxl) {
+            align-items: flex-start;
+        }
+
         &__col-2 {
             @include min-w($screen-lgx) {
                 max-width: 480px;
+            }
+
+            @include min-w($screen-xxl) {
+                padding-top: 31px;
             }
         }
 
@@ -330,9 +342,24 @@
             margin-bottom: 237px;
         }
 
+        @include min-w($screen-xxl) {
+            margin-top: -56px;
+            align-items: flex-start;
+        }
+
         &__col-2 {
             @include min-w($screen-lgx) {
                 max-width: 602px;
+            }
+
+            @include min-w($screen-xxl) {
+                padding-top: 139px;
+            }
+        }
+
+        .r__title {
+            @include min-w($screen-xxl) {
+                margin-bottom: 61px;
             }
         }
 
@@ -388,9 +415,17 @@
             margin-bottom: 117px;
         }
 
+        @include min-w($screen-xxl) {
+            align-items: flex-start;
+        }
+
         &__col-2 {
             @include min-w($screen-lgx) {
                 max-width: 480px;
+            }
+
+            @include min-w($screen-xxl) {
+                padding-top: 31px;
             }
         }
 
@@ -447,9 +482,17 @@
             margin-bottom: 177px;
         }
 
+        @include min-w($screen-xxl) {
+            align-items: flex-start;
+        }
+
         &__col-2 {
             @include min-w($screen-lgx) {
                 max-width: 602px;
+            }
+
+            @include min-w($screen-xxl) {
+                padding-top: 139px;
             }
         }
 

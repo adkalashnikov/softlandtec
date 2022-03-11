@@ -1,0 +1,266 @@
+.s-ts {
+    background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%,
+            rgba(236, 240, 253, .53) 14.32%,
+            #ecf0fd 45.83%, rgba(236, 240, 253, .43) 84.33%,
+            rgba(236, 240, 253, 0) 100%);
+    padding: 60px 0 80px;
+    transition: padding .3s;
+
+    @include min-w($screen-md) {
+        padding: vw(244) 0 vw(322);
+    }
+
+    @include min-w($screen-xxl) {
+        padding: 307px 0 322px;
+    }
+
+    &__inner {
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include min-w($screen-md) {
+            max-width: 730px;
+            position: relative;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: #272d4e;
+        text-align: center;
+        padding-bottom: 50px;
+
+        @include min-w($screen-md) {
+            padding-bottom: vw(42);
+        }
+
+        @include min-w($screen-xxl) {
+            padding-bottom: 42px;
+        }
+    }
+
+    [class^='decor'] {
+        filter: drop-shadow(0 14px 24px rgba(67, 48, 48, .14));
+    }
+
+    .decor-1 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            bottom: 0;
+            left: -339px;
+            background: url('../../images/scs-img1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-2 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 93px;
+            height: 93px;
+            border-radius: 50%;
+            bottom: 357px;
+            left: -493px;
+            background: url('../../images/scs-img2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-3 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 136px;
+            height: 136px;
+            border-radius: 50%;
+            top: -21px;
+            left: -204px;
+            background: url('../../images/scs-img3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-4 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 94px;
+            height: 94px;
+            border-radius: 50%;
+            top: -36px;
+            right: -147px;
+            background: url('../../images/scs-img4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-5 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 154px;
+            height: 154px;
+            border-radius: 50%;
+            top: 222px;
+            right: -362px;
+            background: url('../../images/scs-img-5.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-6 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 89px;
+            height: 89px;
+            border-radius: 50%;
+            top: 600px;
+            right: -200px;
+            background: url('../../images/scs-img6.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .decor-7 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 475px;
+            height: 216px;
+            top: 287px;
+            left: -106px;
+            background: url('../../icons/dot-pattern-light-green.svg');
+        }
+    }
+
+    .decor-8 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: 475px;
+            height: 216px;
+            top: 163px;
+            right: -128px;
+            background: url('../../icons/dot-pattern-red.svg');
+        }
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        perspective: 50px;
+        perspective-origin: 50% 0;
+        height: 320px;
+
+        @include min-w($screen-md) {
+            height: 440px;
+            z-index: 1;
+        }
+    }
+
+    &__slider-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+
+        @include min-w($screen-md) {
+            padding-top: 62px;
+            padding-right: 61px;
+        }
+
+        span {
+            margin-right: 28px;
+            cursor: pointer;
+        }
+    }
+
+    &__slide {
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 18px 52.8537px rgba(215, 228, 249, .5);
+        border-radius: 20px;
+        padding: 50px 30px;
+        background-image: url('../../icons/ic-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 28px;
+        background-size: 32% auto;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.49;
+        text-align: center;
+        color: #94a2b3;
+        transition: all .5s;
+        cursor: pointer;
+
+        @include min-w($screen-md) {
+            height: 390px;
+            padding: 82px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 26.7px;
+        }
+
+        // hide slides except first 3
+        &:not([id$="_1"]):not([id$="_2"]):not([id$="_3"]) {
+            transform: translate3d(-50%, -65%, -45px);
+            z-index: 1;
+            opacity: 0;
+        }
+    }
+
+    #slide_1 {
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 4;
+    }
+
+    #slide_2 {
+        transform: translate3d(-50%, -28%, -15px);
+        z-index: 3;
+
+        @include min-w($screen-md) {
+            transform: translate3d(-50%, -133px, -4px);
+        }
+    }
+
+    #slide_3 {
+        transform: translate3d(-50%, 17%, -33px);
+        z-index: 2;
+
+        @include min-w($screen-md) {
+            transform: translate3d(-50%, -56px, -9px);
+        }
+    }
+}

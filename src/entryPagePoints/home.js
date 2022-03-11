@@ -1,4 +1,5 @@
 import '@/assets/sass/entryPage/home.scss';
+import initTSlider from 'js/components/testimonials-slider';
 
 document.addEventListener('DOMContentLoaded', () => {
     // lazy load video background
@@ -47,4 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     // /show more text in about us cards
+
+    // testimonials-slider
+    initTSlider();
 });

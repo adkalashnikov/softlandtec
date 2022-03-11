@@ -99,3 +99,15 @@
         margin-top: 0;
     }
 }
+
+@keyframes move {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 135%;
+        opacity: 0;
+    }
+}

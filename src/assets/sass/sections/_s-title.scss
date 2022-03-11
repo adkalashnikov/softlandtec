@@ -12,11 +12,11 @@
 
         @include min-w($screen-md) {
             max-width: 1236px;
-            padding: vw(175) 0;
+            padding: vw(130) 0 vw(175);
         }
 
         @include min-w($screen-xxl) {
-            padding: 175px 0;
+            padding: 131px 0 175px;
         }
     }
 
