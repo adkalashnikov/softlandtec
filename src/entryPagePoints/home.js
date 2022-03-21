@@ -1,5 +1,6 @@
 import '@/assets/sass/entryPage/home.scss';
 import initTSlider from 'js/components/testimonials-slider';
+import scrollToElem from 'js/components/scrollToElem';
 
 document.addEventListener('DOMContentLoaded', () => {
     // lazy load video background
@@ -51,4 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // testimonials-slider
     initTSlider();
+
+    // scroll to contact us section
+    const contactLinks = document.querySelectorAll('a[href^="#c-us"]');
+
+    if(contactLinks) {
+        [ ...contactLinks ].forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                let currentTarget = e.currentTarget,
+                    hash = currentTarget.getAttribute('href'),
+                    target = document.getElementById(hash.substring(1));
+
+                if(!target) return;
+
+                if(document.body.classList.contains('show-nav')) {
+                    document.body.classList.remove('show-nav')
+                }
+
+                scrollToElem(target, 150);
+            });
+        });
+    }
+    // /scroll to contact us section
 });

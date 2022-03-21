@@ -531,16 +531,6 @@
 
         .decor-3 {
             display: none;
-
-            @include min-w($screen-lgx) {
-                display: block;
-                position: absolute;
-                width: 216px;
-                height: 475px;
-                top: -23px;
-                left: 294px;
-                background: url('../../icons/dot-pattern.svg');
-            }
         }
     }
 

@@ -1,0 +1,200 @@
+.s-cu {
+    padding-bottom: 50px;
+
+    @include min-w($screen-lgx) {
+        padding-bottom: vw(155);
+    }
+
+    @include min-w($screen-xxl) {
+        padding-bottom: 155px;
+    }
+
+    &__top {
+        padding: 0 0 50px;
+        text-align: center;
+
+        @include min-w($screen-lgx) {
+            padding: 0 0 vw(75);
+        }
+
+        @include min-w($screen-xxl) {
+            padding: 0 0 75px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: #272d4e;
+    }
+
+    &__row {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        @include min-w($screen-md) {
+            max-width: 100%;
+        }
+    }
+
+    h4 {
+        margin: 0;
+        margin-bottom: 30px;
+        color: #272d4e;
+
+        @include fluid-font(20px, 35px, $screen-md, 1920px);
+    }
+}
+
+#f4form-wrapper {
+    max-width: 742px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 18px 52.8537px rgba(215, 228, 249, .8);
+    border-radius: 20px;
+    padding: 50px 30px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+
+    @include fluid-font(15px, 18px, $screen-md, $screen-lgx);
+
+    @include min-w($screen-md) {
+        padding: 50px;
+    }
+
+    fieldset {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    .form-view {
+        max-width: 100%;
+        width: 100%;
+        font-family: $font-family;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+
+        * {
+            font: inherit;
+            padding: 0;
+            margin: 0;
+            color: #94a2b3;
+        }
+
+        .agile-span-asterisk {
+            color: red;
+        }
+
+        legend {
+            line-height: 1.1;
+            margin: 0;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 27px;
+            text-align: center;
+            color: #000000;
+
+            @include min-w($screen-md) {
+                font-weight: bold;
+                margin-bottom: 32px;
+            }
+
+            @include fluid-font(27px, 52px, $screen-md, $screen-xl);
+
+            * {
+                color: inherit;
+                font: inherit;
+                line-height: inherit;
+                margin: 0;
+            }
+        }
+
+        .agile-form-description {
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .agile-field {
+            width: 100%;
+        }
+
+        .agile-label:not(:empty) {
+            padding-bottom: 5px;
+        }
+
+        fieldset {
+            & > * {
+                margin-bottom: 25px;
+            }
+
+            .bottom-group {
+                margin-bottom: 0;
+            }
+        }
+
+        input,
+        textarea {
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+            border-bottom: 3px solid #94a2b3;
+            color: #000000;
+            padding: 0 !important;
+            padding-bottom: 3px !important;
+            width: 100%;
+            outline: none;
+            resize: none;
+
+            &::placeholder {
+                opacity: .5;
+            }
+        }
+
+        .btn-wrapper {
+            text-align: center;
+        }
+
+        [type='submit'] {
+            font-family: $font-family;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: none;
+            padding: 12px 80px;
+            background: #3c98c9;
+            color: #ffffff;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            transition: background-color .3s;
+            text-decoration: none;
+            cursor: pointer;
+            height: 50px;
+            border-radius: 60px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            text-transform: uppercase;
+
+            &:hover {
+                background:  darken(#3c98c9, 10%);
+                color: #ffffff;
+            }
+        }
+
+        #agile-error-msg:not(:empty) {
+            padding-top: 15px;
+            color: red;
+            display: inline-flex;
+            padding-bottom: 5px;
+        }
+    }
+}

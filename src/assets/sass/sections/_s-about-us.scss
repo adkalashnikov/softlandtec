@@ -239,6 +239,7 @@
         color: #299ef3;
         margin-top: 15px;
         transition: color .3s;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
 
         @include min-w($screen-xl) {
             margin-top: 19px;
