@@ -1,0 +1,345 @@
+.s-ot {
+    &__top {
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+
+        @include min-w($screen-md) {
+            padding-bottom: vw(260);
+        }
+
+        @include min-w($screen-lgx) {
+            padding: vw(100) 0 vw(235);
+        }
+
+        @include min-w($screen-xxl) {
+            padding: 100px 0 235px;
+        }
+    }
+
+    &__top-decor {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 43.5px;
+        height: 67.5px;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        @include min-w($screen-md) {
+            top: vw(200);
+            width: vw(87);
+            height: vw(135);
+        }
+
+        @include min-w($screen-xxl) {
+            width: 87px;
+            height: 135px;
+            top: 193px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: #272d4e;
+    }
+
+    &__row {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        @include min-w($screen-md) {
+            max-width: vw(1406);
+        }
+
+        @include min-w($screen-xxl) {
+            max-width: 1406px;
+        }
+    }
+
+    &__row-inner {
+        width: 100%;
+
+        @include min-w($screen-md) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include min-w($screen-lgx) {
+            justify-content: flex-start;
+        }
+
+        @include min-w($screen-xxl) {
+            margin: 0 -30px;
+        }
+
+        @include min-w(1720px) {
+            margin: 0;
+        }
+    }
+
+    &__item-wrapper {
+        margin-bottom: 48px;
+
+        @include min-w($screen-md) {
+            margin-right: 48px;
+            width: calc(50% - 48px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include min-w($screen-lgx) {
+            width: vw(354);
+            margin-right: vw(172);
+            margin-bottom: vw(93);
+        }
+
+        @include min-w($screen-xxl) {
+            width: 354px;
+            margin-bottom: 93px;
+            margin-right: 172px;
+        }
+
+        &:nth-child(2n+2) {
+            @include min-w($screen-md) {
+                margin-right: 0;
+            }
+
+            @include min-w($screen-lgx) {
+                margin-right: vw(172);
+            }
+
+            @include min-w($screen-xxl) {
+                margin-right: 172px;
+            }
+        }
+
+        &:nth-child(3n+3) {
+            @include min-w($screen-lgx) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item-image {
+        overflow: hidden;
+        height: 300px;
+        position: relative;
+        display: block;
+        flex-shrink: 0;
+        z-index: 1;
+        filter: drop-shadow(-25px 20px 44px rgba(26, 112, 158, .3));
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+        @include min-w($screen-lgx) {
+            height: vw(411);
+            margin-bottom: vw(23);
+            width: 91.2%;
+            margin-left: auto;
+        }
+
+        @include min-w($screen-xxl) {
+            margin-bottom: 23px;
+            height: 411px;
+        }
+
+        img {
+            object-fit: cover;
+            max-width: none;
+            width: auto;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &__item-title {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 1;
+        color: #272d4e;
+        margin-bottom: 15px;
+
+        @include fluid-font(20px, 36px, $screen-md, 1920px);
+
+        @include min-w($screen-lgx) {
+            margin-bottom: 13px;
+        }
+
+        @include min-w($screen-xl) {
+            line-height: 1.1;
+        }
+
+        * {
+            color: inherit;
+            font: inherit;
+            margin: 0;
+            text-decoration: none;
+        }
+    }
+
+    &__item-text {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 30px;
+        color: #94a2b3;
+
+        @include fluid-font(15px, 18px, $screen-md, 1920px);
+    }
+
+    .decor-1 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: vw(164);
+            height: vw(360);
+            top: vw(-37);
+            left: 0;
+            background: url('../../icons/dot-pattern-sm.svg');
+            background-size: vw(39) vw(39);
+        }
+
+        @include min-w($screen-xxl) {
+            width: 164px;
+            height: 360px;
+            top: -37px;
+            background-size: 39px 39px;
+        }
+    }
+
+    .decor-2 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            opacity: .5;
+            width: vw(40.52);
+            height: vw(40.52);
+            top: vw(133);
+            left: vw(-69);
+            background: url('../../icons/circle-40.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include min-w($screen-xxl) {
+            width: 40.52px;
+            height: 40.52px;
+            top: 133px;
+            left: -69px;
+        }
+    }
+
+    .decor-3 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            opacity: .5;
+            width: vw(249.95);
+            height: vw(249.95);
+            top: vw(161);
+            left: vw(-58);
+            background: url('../../icons/circle-249.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include min-w($screen-xxl) {
+            width: 249.95px;
+            height: 249.95px;
+            top: 161px;
+            left: -58px;
+        }
+    }
+
+    .decor-4 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            opacity: .5;
+            width: vw(40.52);
+            height: vw(40.52);
+            top: vw(374);
+            left: vw(-43);
+            background: url('../../icons/circle-40.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include min-w($screen-xxl) {
+            width: 40.52px;
+            height: 40.52px;
+            top: 374px;
+            left: -43px;
+        }
+    }
+
+    .decor-5 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            opacity: .5;
+            width: vw(249.95);
+            height: vw(249.95);
+            top: vw(-62);
+            right: vw(-31);
+            background: url('../../icons/circle-249.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include min-w($screen-xxl) {
+            width: 249.95px;
+            height: 249.95px;
+            top: -62px;
+            right: -31px;
+        }
+    }
+
+    .decor-6 {
+        display: none;
+
+        @include min-w($screen-lgx) {
+            display: block;
+            position: absolute;
+            width: vw(402);
+            height: vw(171);
+            top: vw(265);
+            right: vw(-89);
+            background: url('../../icons/dot-pattern-sm.svg');
+            background-size: vw(41) vw(41);
+        }
+
+        @include min-w($screen-xxl) {
+            width: 402px;
+            height: 171px;
+            top: 265px;
+            right: -89px;
+            background-size: 41px 41px;
+        }
+    }
+}

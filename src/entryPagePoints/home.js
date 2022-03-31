@@ -53,26 +53,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // testimonials-slider
     initTSlider();
 
-    // scroll to contact us section
-    const contactLinks = document.querySelectorAll('a[href^="#c-us"]');
+    // scroll to sections by anchors
+    const contactLinks = document.querySelectorAll('a[href^="#c-us"]'),
+        teamLinks = document.querySelectorAll('a[href^="#s-ot"]');
 
-    if(contactLinks) {
-        [ ...contactLinks ].forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                let currentTarget = e.currentTarget,
-                    hash = currentTarget.getAttribute('href'),
-                    target = document.getElementById(hash.substring(1));
+    function scrollTOSection(trigger, offset) {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            let currentTarget = e.currentTarget,
+                hash = currentTarget.getAttribute('href'),
+                target = document.getElementById(hash.substring(1));
 
-                if(!target) return;
+            if(!target) return;
 
-                if(document.body.classList.contains('show-nav')) {
-                    document.body.classList.remove('show-nav')
-                }
+            if(document.body.classList.contains('show-nav')) {
+                document.body.classList.remove('show-nav')
+            }
 
-                scrollToElem(target, 150);
-            });
+            scrollToElem(target, offset);
         });
     }
-    // /scroll to contact us section
+
+    if(contactLinks) {
+        [ ...contactLinks ].forEach(trigger => scrollTOSection(trigger, 150));
+    }
+
+    if(teamLinks) {
+        [ ...teamLinks ].forEach(trigger => scrollTOSection(trigger, 0));
+    }
+    // /scroll to sections by anchors
 });
