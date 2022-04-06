@@ -119,48 +119,6 @@
         }
     }
 
-    &__item-decor-1 {
-        left: vw(32);
-        top: vw(-50);
-        width: vw(140);
-        height: vw(95);
-
-        @include min-w($screen-xxl) {
-            left: 32px;
-            top: -50px;
-            width: 140px;
-            height: 95px;
-        }
-    }
-
-    &__item-decor-2 {
-        left: vw(268);
-        top: vw(-133);
-        width: vw(114);
-        height: vw(77);
-
-        @include min-w($screen-xxl) {
-            left: 268px;
-            top: -133px;
-            width: 114px;
-            height: 77px;
-        }
-    }
-
-    &__item-decor-3 {
-        left: vw(325);
-        top: vw(115);
-        width: vw(170);
-        height: vw(116);
-
-        @include min-w($screen-xxl) {
-            left: 325px;
-            top: 115px;
-            width: 170px;
-            height: 116px;
-        }
-    }
-
     &__item-image {
         overflow: hidden;
         height: 218px;
