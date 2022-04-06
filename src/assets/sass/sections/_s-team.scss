@@ -9,11 +9,11 @@
         }
 
         @include min-w($screen-lgx) {
-            padding: vw(100) 0 vw(235);
+            padding: vw(260) 0 vw(235);
         }
 
         @include min-w($screen-xxl) {
-            padding: 100px 0 235px;
+            padding: 274px 0 235px;
         }
     }
 
@@ -35,10 +35,14 @@
             height: vw(135);
         }
 
+        @include min-w($screen-lgx) {
+            top: vw(360);
+        }
+
         @include min-w($screen-xxl) {
             width: 87px;
             height: 135px;
-            top: 193px;
+            top: 367px;
         }
     }
 
