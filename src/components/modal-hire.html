@@ -1,0 +1,102 @@
+<div class="modal js-modal modal-hire">
+    <div>
+        <div class="modal__inner">
+            <div class="st-1 modal-hire__step">
+                <div class="title">What do you want?</div>
+
+                <div class="st-1__buttons">
+                    <button class="btn js-show-s-form">Specialist</button>
+
+                    <button class="btn js-show-t-form">Turnkey Order</button>
+                </div>
+            </div>
+
+            <div class="st-2 modal-hire__step hidden">
+                <div class="title">Choice of specialists</div>
+
+                <div class="st__container">
+                    <div class="f-tags js-st-2-tags"></div>
+
+                    <form class="form-hire-st2">
+                        <div class="form-group">
+                            <input class="input-tag-p1" id="input-tag-p1" type="text" placeholder="Please, enter Technology">
+                            <label for="input-tag-p1">Technology</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="input-tag-p2" id="input-tag-p2" type="number" min="0" placeholder="Please, enter Number of specialists">
+                            <label for="input-tag-p2">Number of specialists</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="input-tag-p3" id="input-tag-p3" type="number" min="0" placeholder="Please, enter Number of Experience">
+                            <label for="input-tag-p3">Experience</label>
+                        </div>
+
+                        <div class="form-alert js-form-st2-alert hidden">Please fill out the form and add a specialist</div>
+
+                        <div class="st-2__buttons">
+                            <button class="btn js-hire-st2-btn">ADD specialist</button>
+
+                            <button class="btn btn-light" type="submit">Hire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="st-3 modal-hire__step hidden">
+                <div class="title">Selection confirmation</div>
+
+                <div class="st__container">
+                    <div class="f-tags js-st-3-tags"></div>
+
+                    <form class="form-hire-st3" id="agile-form" action="https://j4th.agilecrm.com/formsubmit" method="GET">
+                        <fieldset>
+                            <div style="display: none; height: 0px; width: 0px;">
+                                <input type="hidden" id="_agile_form_name" name="_agile_form_name" value="Request Form">
+                                <input type="hidden" id="_agile_domain" name="_agile_domain" value="j4th">
+                                <input type="hidden" id="_agile_api" name="_agile_api" value="rivuu8sl0bg4bcvv79vchipgsa">
+                                <input type="hidden" id="_agile_redirect_url" name="https://softlandtec.com/form-submited.html" value="#">
+                                <input type="hidden" id="_agile_document_url" name="_agile_document_url" value="">
+                                <input type="hidden" id="_agile_confirmation_msg" name="_agile_confirmation_msg" value="Great! Thanks for filling out the form.">
+                                <input type="hidden" id="_agile_form_id_tags" name="tags" value="">
+                                <input type="hidden" id="_agile_form_id" name="_agile_form_id" value="6644999929790464">
+                            </div>
+                            <div class="agile-group required-control">
+                                <div class="agile-field-xlarge agile-field">
+                                    <input maxlength="250" id="agilefield-11" name="first_name" type="text" placeholder="" class="agile-height-default" required="">
+                                </div>
+                                <label class="agile-label" for="agilefield-11">Name<span class="agile-span-asterisk"> *</span></label>
+                            </div>
+                            <div class="agile-group required-control">
+                                <div class="agile-field-xlarge agile-field">
+                                    <input maxlength="250" id="agilefield-9" name="email" type="email" placeholder="" class="agile-height-default" required="">
+                                </div>
+                                <label class="agile-label" for="agilefield-9">Email<span class="agile-span-asterisk"> *</span></label>
+                            </div>
+                            <div class="agile-group">
+                                <div class="agile-field-xlarge agile-field">
+                                    <input maxlength="250" id="agilefield-8" name="phone" type="text" placeholder="" class="agile-height-default">
+                                </div>
+                                <label class="agile-label" for="agilefield-8">Phone Number</label>
+                            </div>
+                            <div class="agile-group hidden">
+                                <div class="agile-field-xlarge agile-field">
+                                    <textarea maxlength="250" id="agilefield-10" name="note" placeholder="" class="js-st-3-textarea agile-height-default"></textarea>
+                                </div>
+                            </div>
+                            <div class="agile-group bottom-group">
+                                <div class="agile-field agile-button-field btn-wrapper">
+                                    <button type="submit" class="agile-button btn">Ready</button>
+                                    <br><span id="agile-error-msg"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -346,4 +346,21 @@
             background-size: 41px 41px;
         }
     }
+
+    &__bottom {
+        text-align: center;
+        padding-bottom: 48px;
+
+        @include min-w($screen-lgx) {
+            padding-bottom: 0;
+        }
+
+        .btn {
+            text-transform: uppercase;
+
+            @include min-w($screen-md) {
+                min-width: 267px;
+            }
+        }
+    }
 }

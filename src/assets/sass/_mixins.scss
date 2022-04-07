@@ -73,6 +73,19 @@
     }
 }
 
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-200px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-up {
     0% {
         display: flex;
@@ -109,5 +122,17 @@
     100% {
         top: 135%;
         opacity: 0;
+    }
+}
+
+@keyframes tagScaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
     }
 }

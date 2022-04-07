@@ -1,0 +1,409 @@
+.modal-hire {
+    &.active {
+        display: block;
+    }
+
+    & > div {
+        min-height: 100%;
+    }
+
+    .modal__inner {
+        width: 100%;
+    }
+
+    &__step {
+        width: 100%;
+        margin: auto;
+
+        &:not([class*="hidden"]) {
+            animation: fade-down .5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .title {
+        color: #ffffff;
+        margin-bottom: 60px;
+        font-size: 25px;
+        line-height: 1.1;
+        text-align: center;
+
+        @include fluid-font(25px, 85px, $screen-md, 1920px);
+
+        @include min-w($screen-md) {
+            margin-bottom: 90px;
+        }
+    }
+
+    .st {
+        &__container {
+            max-width: 630px;
+            width: 100%;
+            background: rgba(255, 255, 255, .5);
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+            padding: 25px 15px;
+
+            @include min-w(560px) {
+                padding: 44px 48px 36px;
+            }
+        }
+    }
+
+    .dark {
+        .st {
+            &__container {
+                background: rgba(41, 158, 243, .5);
+                border: 1px solid transparent;
+            }
+        }
+    }
+
+    .st-1 {
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+
+            @include min-w($screen-md) {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .btn {
+            text-transform: uppercase;
+
+            @include min-w($screen-md) {
+                padding: 12px;
+                min-width: 268px;
+            }
+
+            & + .btn {
+                margin-top: 30px;
+
+                @include min-w($screen-md) {
+                    margin-top: 0;
+                    margin-left: 86px;
+                }
+            }
+        }
+    }
+
+    .st-2 {
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+
+            @include min-w(420px) {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .btn {
+            text-transform: uppercase;
+
+            @include min-w(420px) {
+                padding: 12px;
+                width: 100%;
+            }
+
+            & + .btn {
+                margin-top: 24px;
+
+                @include min-w(420px) {
+                    max-width: 205px;
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    .st-3 {
+        fieldset {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .form-hire-st3 {
+            max-width: 100%;
+            width: 100%;
+            font-family: $font-family;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            border: 0;
+
+            * {
+                font: inherit;
+                padding: 0;
+                margin: 0;
+            }
+
+            .agile-field {
+                width: 100%;
+            }
+
+            fieldset {
+                & > * {
+                    margin-bottom: 24px;
+                }
+
+                .bottom-group {
+                    margin-bottom: 0;
+                    padding-top: 24px;
+                }
+            }
+
+            input,
+            textarea {
+                border-radius: 14px;
+                background: #d9d9da;
+                border: 0;
+                color: #000000;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 16px;
+                width: 100%;
+                outline: none;
+                resize: none;
+
+                &::placeholder {
+                    opacity: .5;
+                }
+
+                &.error {
+                    box-shadow: inset 0 0 0 1px red;
+                }
+            }
+
+            label {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                color: #434345;
+                display: block;
+                padding-top: 4px;
+                padding-left: 16px;
+            }
+
+            .btn-wrapper {
+                text-align: center;
+            }
+
+            [type='submit'] {
+                font-family: $font-family;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                border: none;
+                padding: 12px 80px;
+                background: #3c98c9;
+                color: #ffffff;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                transition: background-color .3s;
+                text-decoration: none;
+                cursor: pointer;
+                height: 50px;
+                border-radius: 60px;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                text-transform: uppercase;
+
+                @include min-w($screen-xl) {
+                    height: 72px;
+                }
+
+                &:hover {
+                    background:  darken(#3c98c9, 10%);
+                    color: #ffffff;
+                }
+            }
+
+            #agile-error-msg:not(:empty) {
+                padding-top: 15px;
+                color: red;
+                display: inline-flex;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.form-hire-st2 {
+    font-family: $font-family;
+
+    * {
+        font-family: inherit;
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+    }
+
+    input {
+        border-radius: 14px;
+        background: #d9d9da;
+        border: 0;
+        color: #000000;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 16px;
+        width: 100%;
+        outline: none;
+        resize: none;
+
+        &::placeholder {
+            opacity: .5;
+        }
+
+        &.error {
+            box-shadow: inset 0 0 0 1px red;
+        }
+    }
+
+    label {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #434345;
+        display: block;
+        padding-top: 4px;
+        padding-left: 16px;
+    }
+
+    .form-alert {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: red;
+
+        &:not([class*="hidden"]) {
+            animation: fade-up .3s;
+            display: block;
+            padding-left: 16px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@import '~tippy.js/dist/tippy';
+@import '~tippy.js/animations/shift-away';
+@import '~tippy.js/dist/svg-arrow';
+
+.tippy-content {
+    padding: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-family;
+}
+
+.tippy-box {
+    border-radius: 6px;
+    background: #299ef3;
+    color: #ffffff;
+}
+
+.tippy-arrow {
+    color: #299ef3;
+}
+
+.f-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+
+    .f-tag {
+        display: flex;
+        align-items: center;
+        margin: 8px 20px 8px 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        animation: tagScaleIn .2s both;
+    }
+
+    .f-tag-delete {
+        margin-left: 15px;
+        display: flex;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        background-image: url('../../icons/ic-tag-close.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .f-tag-tooltip {
+        display: inline-flex;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+}
+
+.dark {
+    .form-hire-st2 {
+        input {
+            background: #8aa7be;
+            color: #ffffff;
+        }
+
+        label {
+            color: #89a8be;
+        }
+
+        .form-alert {
+            color: #ffffff;
+        }
+    }
+
+    &.st-3 {
+        .form-hire-st3 {
+            input,
+            textarea {
+                background: #8aa7be;
+                color: #ffffff;
+            }
+
+            label {
+                color: #89a8be;
+            }
+
+            [type='submit'] {
+                background: #ffffff;
+                color: #000000;
+
+                &:hover {
+                    background:  darken(#ffffff, 10%);
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+.modal-dark {
+    .tippy-box {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .tippy-arrow {
+        color: #ffffff;
+    }
+}

@@ -1,6 +1,7 @@
 import '@/assets/sass/entryPage/home.scss';
 import initTSlider from 'js/components/testimonials-slider';
 import scrollToElem from 'js/components/scrollToElem';
+import modal from 'js/components/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
     // lazy load video background
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moreContentTriggers.forEach((trigger) => {
             trigger.addEventListener('click', (e) => {
                 const hiddenContent = e.target.parentNode.querySelector('.s-ab__item-more-text');
-                dl.log(hiddenContent);
+
                 hiddenContent.classList.toggle('hide');
 
                 if (e.target.innerHTML === "Show More") {
@@ -82,4 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         [ ...teamLinks ].forEach(trigger => scrollTOSection(trigger, 0));
     }
     // /scroll to sections by anchors
+
+    // show reception modal
+    if(document.querySelector('.js-modal-trigger')) {
+        modal(document.querySelector('.js-modal-trigger'));
+    }
+    // /show reception modal
 });
+
+import 'js/components/hire-forms';

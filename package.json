@@ -22,7 +22,8 @@
   "dependencies": {
     "aos": "^2.3.4",
     "file-loader": "^3.0.1",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
