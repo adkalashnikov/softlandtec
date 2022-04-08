@@ -102,9 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formStep2.addEventListener('submit', (e) => {
         e.preventDefault();
-        addSpecialistTag();
 
-        if(!isFieldsEmpty && tagsStep2.childNodes.length) {
+        if(!isSpecialistsAdded) {
+            addSpecialistTag();
+        }
+
+        if(isSpecialistsAdded) {
             formStep2Alert.classList.add('hidden');
             step2Section.classList.add('hidden');
             step3AddTags();
