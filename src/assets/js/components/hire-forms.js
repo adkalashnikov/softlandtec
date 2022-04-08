@@ -37,6 +37,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function addSpecialistTag() {
+        validateStep2Field(input1);
+        validateStep2Field(input2);
+        validateStep2Field(input3);
+
+        if(!isFieldsEmpty) {
+            tagsStep2.innerHTML += `<div class="f-tag" data-technology="${input1.value}"  data-snum="${input2.value}"  data-enum="${input3.value}">
+                <span class="f-tag-text">${input1.value}, ${input3.value} years</span>
+                <span class="f-tag-delete"
+                    data-tippy-content="${input2.value} specialist(s), <br>
+                    ${input1.value}, <br>
+                    ${input3.value} years of experience"></span>
+                </div>`;
+
+            isSpecialistsAdded = true;
+            formStep2Alert.classList.add('hidden');
+            formStep2.reset();
+        } else {
+            isSpecialistsAdded = false;
+        }
+    }
+
     function step3AddTags() {
         let tags = [].slice.call(tagsStep2.querySelectorAll('.f-tag'));
 
@@ -46,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 tagTitle = newTag.querySelector('.f-tag-text');
             tagTitle.innerText = newTag.dataset.technology;
             tagInfo.classList = 'f-tag-tooltip';
-            tagInfo.innerText = '🛈';
             step3TagsWrapper.appendChild(newTag);
 
             orderDetails += `\n- \nTechnology: ${newTag.dataset.technology} \nNumber of specialists: ${newTag.dataset.snum} \nExperience: ${newTag.dataset.enum}`;
@@ -70,26 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnStep2Hire.addEventListener('click', (e) => {
         e.preventDefault();
-
-        validateStep2Field(input1);
-        validateStep2Field(input2);
-        validateStep2Field(input3);
-
-        if(!isFieldsEmpty) {
-            tagsStep2.innerHTML += `<div class="f-tag" data-technology="${input1.value}"  data-snum="${input2.value}"  data-enum="${input3.value}">
-                <span class="f-tag-text">${input1.value}, ${input3.value} years</span>
-                <span class="f-tag-delete"
-                    data-tippy-content="${input2.value} specialist(s), <br>
-                    ${input1.value}, <br>
-                    ${input3.value} years of experience"></span>
-                </div>`;
-
-            isSpecialistsAdded = true;
-            formStep2Alert.classList.add('hidden');
-            formStep2.reset();
-        } else {
-            isSpecialistsAdded = false;
-        }
+        addSpecialistTag();
     });
 
     document.addEventListener('click', (e) => {
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formStep2.addEventListener('submit', (e) => {
         e.preventDefault();
+        addSpecialistTag();
 
         if(!isFieldsEmpty && tagsStep2.childNodes.length) {
             formStep2Alert.classList.add('hidden');

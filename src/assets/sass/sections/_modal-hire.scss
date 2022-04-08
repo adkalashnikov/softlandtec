@@ -352,7 +352,20 @@
     .f-tag-tooltip {
         display: inline-flex;
         margin-left: 5px;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        background-image: url('../../icons/ic-info.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
         cursor: pointer;
+    }
+}
+
+.st-3 {
+    .f-tag {
+        color: #000000;
     }
 }
 
@@ -393,6 +406,16 @@
                     color: #000000;
                 }
             }
+        }
+    }
+
+    .f-tags {
+        .f-tag {
+            color: #ffffff;
+        }
+
+        .f-tag-tooltip {
+            background-image: url('../../icons/ic-info-light.svg');
         }
     }
 }

@@ -60,7 +60,7 @@ module.exports = {
                     {
                         loader: 'html-loader',
                         options: {
-                            //minimize: true,
+                            minimize: true,
                             interpolate: true
                         }
                     }
