@@ -42,22 +42,13 @@
         &__container {
             max-width: 630px;
             width: 100%;
-            background: rgba(255, 255, 255, .5);
+            background: #808181;
             border: 1px solid #ffffff;
             border-radius: 20px;
             padding: 25px 15px;
 
             @include min-w(560px) {
                 padding: 44px 48px 36px;
-            }
-        }
-    }
-
-    .dark {
-        .st {
-            &__container {
-                background: rgba(41, 158, 243, .5);
-                border: 1px solid transparent;
             }
         }
     }
@@ -119,6 +110,36 @@
                     margin-top: 0;
                     margin-left: 20px;
                 }
+            }
+        }
+    }
+
+    .form-turnkey-st2 {
+        .btn {
+            width: auto;
+            min-width: 210px;
+
+            @include min-w($screen-md) {
+                width: auto;
+                min-width: 267px;
+            }
+        }
+
+        .input-p-desc {
+            &__bottom {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                color: #434345;
+
+                @include min-w($screen-md) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            &__counter {
+                padding-left: 16px;
             }
         }
     }
@@ -250,7 +271,8 @@
         margin-bottom: 24px;
     }
 
-    input {
+    input,
+    textarea {
         border-radius: 14px;
         background: #d9d9da;
         border: 0;
@@ -366,67 +388,5 @@
 .st-3 {
     .f-tag {
         color: #000000;
-    }
-}
-
-.dark {
-    .form-hire-st2 {
-        input {
-            background: #8aa7be;
-            color: #ffffff;
-        }
-
-        label {
-            color: #89a8be;
-        }
-
-        .form-alert {
-            color: #ffffff;
-        }
-    }
-
-    &.st-3 {
-        .form-hire-st3 {
-            input,
-            textarea {
-                background: #8aa7be;
-                color: #ffffff;
-            }
-
-            label {
-                color: #89a8be;
-            }
-
-            [type='submit'] {
-                background: #ffffff;
-                color: #000000;
-
-                &:hover {
-                    background:  darken(#ffffff, 10%);
-                    color: #000000;
-                }
-            }
-        }
-    }
-
-    .f-tags {
-        .f-tag {
-            color: #ffffff;
-        }
-
-        .f-tag-tooltip {
-            background-image: url('../../icons/ic-info-light.svg');
-        }
-    }
-}
-
-.modal-dark {
-    .tippy-box {
-        background: #ffffff;
-        color: #000000;
-    }
-
-    .tippy-arrow {
-        color: #ffffff;
     }
 }

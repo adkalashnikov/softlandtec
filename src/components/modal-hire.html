@@ -11,13 +11,13 @@
                 </div>
             </div>
 
-            <div class="st-2 modal-hire__step hidden">
+            <div class="st-2 js-st2-specialist modal-hire__step hidden">
                 <div class="title">Choice of specialists</div>
 
                 <div class="st__container">
                     <div class="f-tags js-st-2-tags"></div>
 
-                    <form class="form-hire-st2">
+                    <form class="form-hire-st2" data-order-type="Specialist">
                         <div class="form-group">
                             <input class="input-tag-p1" id="input-tag-p1" type="text" placeholder="Please, enter Technology">
                             <label for="input-tag-p1">Technology</label>
@@ -39,6 +39,33 @@
                             <button class="btn js-hire-st2-btn">ADD specialist</button>
 
                             <button class="btn btn-light" type="submit">Hire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="st-2 js-st2-turnkey modal-hire__step hidden">
+                <div class="title">Request for project</div>
+
+                <div class="st__container">
+                    <form class="form-hire-st2 form-turnkey-st2 js-form-st2-turnkey" data-order-type="Turnkey">
+                        <div class="form-group">
+                            <input class="js-input-p-name" id="input-p-name" type="text" placeholder="Please, enter Project Name">
+                            <label for="input-p-name">Project Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="js-input-p-desc" id="input-p-desc" cols="30" rows="5" maxlength="1250" placeholder="Please, enter Brief description"></textarea>
+                            <div class="input-p-desc__bottom">
+                                <label for="input-p-desc">Brief description</label>
+                                <span class="js-input-p-desc-count input-p-desc__counter">Characters count: 0/1250</span>
+                            </div>
+                        </div>
+
+                        <div class="form-alert js-st2-turnkey-alert hidden">Please fill out the form</div>
+
+                        <div class="st-2__buttons">
+                            <button class="btn" type="submit">Hire</button>
                         </div>
                     </form>
                 </div>
