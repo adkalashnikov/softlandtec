@@ -2,7 +2,13 @@ export default function modal(trigger) {
     const body = document.querySelector('body'),
         modal = document.querySelector('.js-modal');
 
-    trigger.addEventListener('click', () => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if(body.classList.contains('show-nav')) {
+            body.classList.remove('show-nav');
+        }
+
         modal.classList.add('active');
         body.classList.add('show-modal');
     });

@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // scroll to sections by anchors
     const contactLinks = document.querySelectorAll('a[href^="#c-us"]'),
-        teamLinks = document.querySelectorAll('a[href^="#s-ot"]');
+        teamLinks = document.querySelectorAll('a[href^="#s-ot"]'),
+        modalTriggers = document.querySelectorAll('.js-modal-trigger');
 
     function scrollTOSection(trigger, offset) {
         trigger.addEventListener('click', (e) => {
@@ -85,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // /scroll to sections by anchors
 
     // show reception modal
-    if(document.querySelector('.js-modal-trigger')) {
-        modal(document.querySelector('.js-modal-trigger'));
+    if(modalTriggers) {
+        [ ...modalTriggers ].forEach(trigger => modal(trigger));
     }
     // /show reception modal
 });
