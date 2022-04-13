@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         teamLinks = document.querySelectorAll('a[href^="#s-ot"]'),
         modalTriggers = document.querySelectorAll('.js-modal-trigger');
 
-    function scrollTOSection(trigger, offset) {
+    function scrollTOSection(trigger, offsetMobile = 0, offsetLg = 0, offset = 0) {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
             let currentTarget = e.currentTarget,
@@ -72,16 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('show-nav')
             }
 
-            scrollToElem(target, offset);
+            if(window.innerWidth < 768) {
+                scrollToElem(target, offsetMobile);
+            } else if (window.innerWidth > 767 && window.innerWidth < 1230) {
+                scrollToElem(target, offsetLg);
+            } else {
+                scrollToElem(target, offset);
+            }
         });
     }
 
     if(contactLinks) {
-        [ ...contactLinks ].forEach(trigger => scrollTOSection(trigger, 150));
+        [ ...contactLinks ].forEach(trigger => scrollTOSection(trigger, 80, 80, 150));
     }
 
     if(teamLinks) {
-        [ ...teamLinks ].forEach(trigger => scrollTOSection(trigger, 0));
+        [ ...teamLinks ].forEach(trigger => scrollTOSection(trigger, 30, 50, -100));
     }
     // /scroll to sections by anchors
 

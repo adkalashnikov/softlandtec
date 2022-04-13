@@ -59,7 +59,7 @@ $page-header-z: 10000;
         background: #161616;
 
         @include min-w(1024px) {
-            padding: 28px 24px;
+            padding: 18px 24px;
         }
     }
 }
@@ -90,7 +90,7 @@ $page-header-z: 10000;
 
     li {
         @include min-w($screen-md) {
-            margin-right: 12px;
+            margin-right: 20px;
         }
 
         @include min-w($screen-xl) {

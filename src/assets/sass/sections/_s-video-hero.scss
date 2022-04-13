@@ -1,9 +1,10 @@
 .s-hero {
-    background: #161616;
+    background-color: #161616;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+    background-image: url('../../images/hero-bg-m.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -15,6 +16,10 @@
     @include min-w($screen-md) {
         padding-top: 300px;
         padding-bottom: 95px;
+    }
+
+    @include min-w($screen-lg) {
+        background-image: url('../../images/hero-bg.jpg');
     }
 
     @include min-w($screen-xxl) {
