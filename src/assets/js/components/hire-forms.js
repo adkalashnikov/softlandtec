@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         input1 = document.querySelector('.input-tag-p1'),
         input2 = document.querySelector('.input-tag-p2'),
         input3 = document.querySelector('.input-tag-p3'),
-        inputPName = document.querySelector('.js-input-p-name'),
         inputPDesc = document.querySelector('.js-input-p-desc'),
         inputPDescCounter = document.querySelector('.js-input-p-desc-count');
 
@@ -134,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function step2TurnkeyClearFields() {
-        inputPName.classList.remove('error');
         inputPDesc.classList.remove('error');
     }
 
@@ -181,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validateStep2TurnkeyForm() {
-        if(validateStep2TurnkeyField(inputPName) && validateStep2TurnkeyField(inputPDesc)) {
+        if(validateStep2TurnkeyField(inputPDesc)) {
             isTurnkeyFormFilled = true;
             formStep2Alert.classList.add('hidden');
         } else {
@@ -198,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(isTurnkeyFormFilled) {
                 step2TurnkeySection.classList.add('hidden');
-                step3TextArea.value  = `Request \n\nType: ${formStep2Turnkey.dataset.orderType} \nProject: ${inputPName.value} \n\nDescription:\n${inputPDesc.value}`;
+                step3TextArea.value  = `Request \n\nType: ${formStep2Turnkey.dataset.orderType} \n\nDescription:\n${inputPDesc.value}`;
                 step3Section.classList.remove('hidden');
             }
         });
