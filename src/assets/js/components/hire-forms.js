@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         input2 = document.querySelector('.input-tag-p2'),
         input3 = document.querySelector('.input-tag-p3'),
         inputPDesc = document.querySelector('.js-input-p-desc'),
-        inputPDescCounter = document.querySelector('.js-input-p-desc-count');
+        inputPDescCounter = document.querySelector('.js-input-p-desc-count'),
+        modal = document.querySelector('.modal-hire');
 
     let isSpecialistsAdded = false,
         isTurnkeyFormFilled = false,
@@ -77,26 +78,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function handlingCloseModal () {
+        isSpecialistsAdded = false;
+        isTurnkeyFormFilled = false;
+        step1Section.classList.remove('hidden');
+        step2Section.classList.add('hidden');
+        step2TurnkeySection.classList.add('hidden');
+        step3Section.classList.add('hidden');
+        formStep2.reset();
+        tagsStep2.innerHTML = '';
+        formStep2Alert.classList.add('hidden');
+        formStep2TurnkeyAlert.classList.add('hidden');
+        formStep2Turnkey.reset();
+        formStep3.reset();
+        step3TagsWrapper.innerHTML = '';
+        orderDetails = '';
+        step2ClearFields();
+        step2TurnkeyClearFields();
+        inputPDescCounter.innerHTML = 'Characters count: 0/1250';
+    }
+
     function closeModalByESC() {
         document.addEventListener('keydown', (e) => {
             if(e.keyCode === 27) {
-                isSpecialistsAdded = false;
-                isTurnkeyFormFilled = false;
-                step1Section.classList.remove('hidden');
-                step2Section.classList.add('hidden');
-                step2TurnkeySection.classList.add('hidden');
-                step3Section.classList.add('hidden');
-                formStep2.reset();
-                tagsStep2.innerHTML = '';
-                formStep2Alert.classList.add('hidden');
-                formStep2TurnkeyAlert.classList.add('hidden');
-                formStep2Turnkey.reset();
-                formStep3.reset();
-                step3TagsWrapper.innerHTML = '';
-                orderDetails = '';
-                step2ClearFields();
-                step2TurnkeyClearFields();
-                inputPDescCounter.innerHTML = 'Characters count: 0/1250';
+                handlingCloseModal();
             }
         });
     }
@@ -210,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
     step2TurnkeyDescriptionHandler();
     deleteTagsHandler();
     closeModalByESC();
+
+    modal.addEventListener('modalClosed', handlingCloseModal);
     // /hire forms
 
     // tags tooltips

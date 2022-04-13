@@ -21,6 +21,21 @@
     &.active {
         display: block;
     }
+
+    .close-modal {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        cursor: pointer;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .show-modal {

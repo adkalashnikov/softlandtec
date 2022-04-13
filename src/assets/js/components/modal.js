@@ -1,6 +1,7 @@
 export default function modal(trigger) {
     const body = document.querySelector('body'),
-        modal = document.querySelector('.js-modal');
+        modal = document.querySelector('.js-modal'),
+        closeBtn = document.querySelector('.js-close-modal');
 
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
@@ -18,6 +19,17 @@ export default function modal(trigger) {
         if(document.querySelector('body.show-modal') && e.keyCode === 27) {
             modal.classList.remove('active');
             body.classList.remove('show-modal');
+        }
+    });
+
+    // close modal btn
+    closeBtn.addEventListener('click', () => {
+        if(document.querySelector('body.show-modal')) {
+            modal.classList.remove('active');
+            body.classList.remove('show-modal');
+
+            // add custom event to modal
+            modal.dispatchEvent(new CustomEvent('modalClosed', { bubbles: true }));
         }
     });
 }
