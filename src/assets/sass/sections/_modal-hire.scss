@@ -87,6 +87,7 @@
         &__buttons {
             display: flex;
             flex-direction: column;
+            padding-top: 4px;
 
             @include min-w(420px) {
                 flex-direction: row;
@@ -134,7 +135,7 @@
 
                 @include min-w($screen-md) {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-end;
                 }
             }
 
@@ -172,12 +173,12 @@
 
             fieldset {
                 & > * {
-                    margin-bottom: 24px;
+                    margin-bottom: 30px;
                 }
 
                 .bottom-group {
                     margin-bottom: 0;
-                    padding-top: 24px;
+                    padding-top: 18px;
                 }
             }
 
@@ -210,7 +211,7 @@
                 line-height: 16px;
                 color: #434345;
                 display: block;
-                padding-top: 4px;
+                padding-bottom: 4px;
                 padding-left: 16px;
             }
 
@@ -268,7 +269,7 @@
     }
 
     .form-group {
-        margin-bottom: 24px;
+        margin-bottom: 30px;
     }
 
     input,
@@ -300,7 +301,7 @@
         line-height: 16px;
         color: #434345;
         display: block;
-        padding-top: 4px;
+        padding-bottom: 4px;
         padding-left: 16px;
     }
 
@@ -345,7 +346,7 @@
 .f-tags {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 
     .f-tag {
         display: flex;
