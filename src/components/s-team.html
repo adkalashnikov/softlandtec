@@ -99,7 +99,10 @@
         </div>
 
         <div class="s-ot__bottom">
-            <button class="btn js-modal-trigger">Calculate</button>
+            <button class="btn js-modal-trigger"
+                    onclick="gtag('event', 'click_calculate_btn', {
+                       event_category: 'click_btn',
+                       event_label: 'Calculate'});">Calculate</button>
         </div>
     </div>
 </section>

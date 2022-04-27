@@ -11,3 +11,20 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
+
+<!-- Code for tawk.to to trigger custom events from dataLayer and send to Google Analytics -->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API || {};
+
+    Tawk_API.onChatStarted = function () {
+        gtag('event', 'chat_started', {
+            event_category: 'chat'
+        });
+    };
+
+    Tawk_API.onOfflineSubmit = function () {
+        gtag('event', 'chat_offline_submit', {
+            event_category: 'chat'
+        });
+    };
+</script>

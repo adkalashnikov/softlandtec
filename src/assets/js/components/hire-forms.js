@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formStep2Turnkey.reset();
         formStep3.reset();
         step3TagsWrapper.innerHTML = '';
+        step3Section.dataset.formType = '';
         orderDetails = '';
         step2ClearFields();
         step2TurnkeyClearFields();
@@ -160,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 formStep2Alert.classList.add('hidden');
                 step2Section.classList.add('hidden');
                 step3AddTags();
+                step3Section.dataset.formType = formStep2.dataset.orderType;
                 step3TextArea.value  = `Request \n\nType: ${formStep2.dataset.orderType} \n\nDetails:${orderDetails}`;
                 step3Section.classList.remove('hidden');
             } else {
@@ -201,9 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(isTurnkeyFormFilled) {
                 step2TurnkeySection.classList.add('hidden');
+                step3Section.dataset.formType = formStep2Turnkey.dataset.orderType;
                 step3TextArea.value  = `Request \n\nType: ${formStep2Turnkey.dataset.orderType} \n\nDescription:\n${inputPDesc.value}`;
                 step3Section.classList.remove('hidden');
             }
+        });
+    }
+
+    function googleAnalyticsFormHandler() {
+        formStep3.addEventListener('submit', () => {
+            let orderType = step3Section.dataset.formType;
+
+            gtag('event', 'submit_order_form', {
+                event_category: 'forms',
+                event_label: `Submited ${orderType} form`
+            });
         });
     }
 
@@ -215,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     step2TurnkeyDescriptionHandler();
     deleteTagsHandler();
     closeModalByESC();
+    googleAnalyticsFormHandler();
 
     modal.addEventListener('modalClosed', handlingCloseModal);
     // /hire forms

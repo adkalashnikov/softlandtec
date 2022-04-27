@@ -96,6 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
         [ ...modalTriggers ].forEach(trigger => modal(trigger));
     }
     // /show reception modal
+
+    // send analytic from contact us form
+    const contactForm = document.querySelector('.js-form-contact-us');
+
+    contactForm.addEventListener('submit', () => {
+        gtag('event', 'submit_contact_form', {
+            event_category: 'forms',
+            event_label: 'Сontact Us form'
+        });
+    });
+    // /send analytic from contact us form
 });
 
 import 'js/components/hire-forms';

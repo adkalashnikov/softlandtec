@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Custom Software Development - SoftLandtec Form</title>
     <meta name="description" content=" SoftLandtec is a custom software development company with expertise in traditional software development and nocode and lowcode development. ">
+    ${require("@/components/head-scripts.html")}
 </head>
 <body>
 <div class="wrapper">
@@ -23,9 +24,18 @@
 
                     <nav class="main-nav" role="navigation">
                         <ul class="page-header-nav page-header-nav__list">
-                            <li><a href="index.html">COMPANY</a></li>
-                            <li><a href="index.html#s-ot">TEAM</a></li>
-                            <li><a href="index.html#c-us">CONTACT US</a></li>
+                            <li><a href="index.html"
+                                   onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'COMPANY'});">COMPANY</a></li>
+                            <li><a href="index.html#s-ot"
+                                   onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'TEAM'});">TEAM</a></li>
+                            <li><a href="index.html#c-us"
+                                   onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'CONTACT US'});">CONTACT US</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -40,9 +50,18 @@
 
                 <div class="nav-mob__list-wrapper">
                     <ul>
-                        <li><a href="index.html">COMPANY</a></li>
-                        <li><a href="index.html#s-ot">TEAM</a></li>
-                        <li><a href="index.html#c-us">CONTACT US</a></li>
+                        <li><a href="index.html"
+                               onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'COMPANY'});">COMPANY</a></li>
+                        <li><a href="index.html#s-ot"
+                               onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'TEAM'});">TEAM</a></li>
+                        <li><a href="index.html#c-us"
+                               onclick="gtag('event', 'click_menu_link', {
+                                        event_category: 'click_menu_link',
+                                        event_label: 'CONTACT US'});">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>
