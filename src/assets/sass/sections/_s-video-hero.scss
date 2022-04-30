@@ -22,10 +22,6 @@
         left: 0;
         top: 0;
         background: rgba(0, 0, 0, .35);
-
-        @include min-w($screen-lg) {
-            display: none;
-        }
     }
 
     & > .page-container {
@@ -38,29 +34,11 @@
     }
 
     @include min-w($screen-lg) {
-        background-image: url('../../images/hero-bg.jpg');
+        background-image: url('../../images/hero-bg-m.jpg');
     }
 
     @include min-w($screen-xxl) {
         min-height: 927px;
-    }
-
-    &__video-bg {
-        display: none;
-
-        @include min-w($screen-lg) {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            overflow: hidden;
-            object-fit: cover;
-            transform: translateX(-50%) translateY(-50%);
-        }
     }
 
     &__content {
