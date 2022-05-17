@@ -211,13 +211,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function googleAnalyticsFormHandler() {
-        formStep3.addEventListener('submit', () => {
+        formStep3.addEventListener('submit', (e) => {
+            e.preventDefault();
             let orderType = step3Section.dataset.formType;
 
             gtag('event', 'submit_order_form', {
                 event_category: 'forms',
                 event_label: `Submited ${orderType} form`
             });
+
+            // Facebook Pixel event
+            fbq('track', 'Purchase', {value: orderType});
+
+            formStep3.submit();
         });
     }
 

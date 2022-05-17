@@ -73,11 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // send analytic from contact us form
     const contactForm = document.querySelector('.js-form-contact-us');
 
-    contactForm.addEventListener('submit', () => {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         gtag('event', 'submit_contact_form', {
             event_category: 'forms',
             event_label: 'Сontact Us form'
         });
+
+        fbq('track', 'Contact');
+
+        contactForm.submit();
     });
     // /send analytic from contact us form
 });

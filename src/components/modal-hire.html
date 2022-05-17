@@ -8,12 +8,14 @@
                     <button class="btn js-show-s-form"
                             onclick="gtag('event', 'show_specialist_form', {
                                    event_category: 'forms',
-                                   event_label: 'Outstaff specialist'});">Outstaff specialist</button>
+                                   event_label: 'Outstaff specialist'});
+                                    fbq('track', 'InitiateOutstaff');">Outstaff specialist</button>
 
                     <button class="btn js-show-t-form"
                             onclick="gtag('event', 'show_turnkey_form', {
                                    event_category: 'forms',
-                                   event_label: 'Turnkey Order'});">Turnkey Order</button>
+                                   event_label: 'Turnkey Order'});
+                                    fbq('track', 'InitiateOrder');">Turnkey Order</button>
                 </div>
             </div>
 

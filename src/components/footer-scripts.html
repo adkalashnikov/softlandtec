@@ -20,11 +20,17 @@
         gtag('event', 'chat_started', {
             event_category: 'chat'
         });
+
+        // Facebook Pixel event
+        fbq('track', 'Contact');
     };
 
     Tawk_API.onOfflineSubmit = function () {
         gtag('event', 'chat_offline_submit', {
             event_category: 'chat'
         });
+
+        // Facebook Pixel event
+        fbq('track', 'Contact');
     };
 </script>
